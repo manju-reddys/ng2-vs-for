@@ -228,7 +228,9 @@ export class VsFor {
     this.offsetSize = this.__horizontal ? 'offsetWidth' : 'offsetHeight';
     this.scrollPos = this.__horizontal ? 'scrollLeft' : 'scrollTop';
 
-    if (this.vsScrollParent) {
+    if(this.vsScrollParent === 'window'){
+      this.scrollParent = window;
+    } else if (this.vsScrollParent) {
       this.scrollParent = closestElement(this.parent, this.vsScrollParent);
     }
     else {
