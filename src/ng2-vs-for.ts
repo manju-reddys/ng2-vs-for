@@ -111,7 +111,7 @@ export class VsFor {
     __horizontal: boolean = false;
     __autoSize: boolean;
     __options: any;
-    scrollParent: HTMLElement;
+    scrollParent: HTMLElement | Window;
     clientSize: string;
     offsetSize: string;
     scrollPos: string;
